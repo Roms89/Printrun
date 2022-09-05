@@ -1,0 +1,11 @@
+; Experiment 01 20/05/2021
+; 10 mL syringes on the three pumps
+M92 X12606 Y12606 Z12606 ; set the proper steps/mL for the 10mL syringe 
+M302 S0 ; print without checking temperature 
+M211 S0 ; print without checking the end stops 
+G91 ; relative positioning 
+G4 S10
+; deliver 1mL on X and Z at 1mL/min, 2mL on Y at 2mL/min
+G1 X-1.99 Y-7.98 Z8.89 F5
+G4 S25
+G1 X0 Y-9.85 Z8.78 F5
