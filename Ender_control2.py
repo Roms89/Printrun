@@ -4,9 +4,9 @@ pyximport.install()
 from printrun.printcore import printcore
 from printrun import gcoder
 import time
-import keyboard
-import freeport
-import xmlrpc.client
+#import keyboard
+#import freeport
+#import xmlrpc.client
 
 
 def set_up(port, gcode_file):
@@ -55,7 +55,7 @@ while count == "False":
     else:
         print("Please enter 'Y' or 'N'.")
 
-rpc = xmlrpc.client.ServerProxy('http://localhost:8000')
+#rpc = xmlrpc.client.ServerProxy('http://localhost:8000')
 
 #if keyboard.is_pressed("q"):
 #    E_stop(p1, p2)
