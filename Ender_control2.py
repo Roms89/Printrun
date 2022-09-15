@@ -32,9 +32,7 @@ def ender_print(p):
 #    p1[0].pause(), p2[0].pause()
 
 
-count = "False"
-
-while count == "False":
+def Ender_main():
     port_1 = str(input("Enter port for pump_1: "))
     gcode1 = str(input("Enter filename for gcode: "))
     port_2 = str(input("Enter port for pump_2: "))
@@ -46,14 +44,28 @@ while count == "False":
     connect(p1)
     connect(p2)
 
-    status_p = str(input("Start print? Y/N "))
-    if status_p == "Y":
-        ender_print(p1), ender_print(p2)
+    count = "False"
+
+    while count == "False": 
+        status_p = str(input("Start print? Y/N "))
+        if status_p == "Y":
+            ender_print(p1), ender_print(p2)
+        elif status_p == "N":
+            p1[0].disconnect(), p2[0].disconnect()
+            break
+        else:
+            print("Please enter 'Y' or 'N'.")
+
+count = "False"
+
+while count == "False":
+    new_run = str(input("New run? Y/N "))
+    if new_run == "Y":
+        Ender_main()
+    elif new_run == "N":
         break
-    elif status_p == "N":
-        p1[0].disconnect(), p2[0].disconnect()
     else:
-        print("Please enter 'Y' or 'N'.")
+        print("Please enter 'Y' or 'N'.")              
 
 #rpc = xmlrpc.client.ServerProxy('http://localhost:8000')
 
