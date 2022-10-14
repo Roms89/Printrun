@@ -4,6 +4,6 @@ M92 X7252 Y7252 Z7252 ; set the proper steps/mL for the 10mL syringe
 M302 S0 ; print without checking temperature 
 M211 S0 ; print without checking the end stops 
 G91 ; relative positioning 
-G4 S3
+G4 S7
 ; deliver 1mL on X and Z at 1mL/min, 2mL on Y at 2mL/min
-G1 X0 Y0 Z0 F5
+G1 X50 Y0 Z-50 F10
