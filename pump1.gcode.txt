@@ -6,12 +6,12 @@ M211 S0 ; print without checking the end stops
 G91 ; relative positioning 
 G4 S3
 ; deliver 1mL on X and Z at 1mL/min, 2mL on Y at 2mL/min
-G1 X-5.764 Y0 Z5.1425 F5
-G4 S154
-G1 X-3.3715 Y-2.2495 Z5.0105 F5
-G4 S139
-G1 X-2.222 Y-3.333 Z4.95 F5
-G4 S138
-G1 X-1.0945 Y-4.389 Z4.8895 F5
-G4 S141
-G1 X0 Y-5.4175 Z4.829 F5
+G1 X-29.06 Y0 Z23.28 F5
+G4 S553
+G1 X0 Y0 Z0 F5
+G4 S0
+G1 X0 Y0 Z0 F5
+G4 S0
+G1 X0 Y0 Z0 F5
+G4 S0
+G1 X0 Y0 Z0 F5

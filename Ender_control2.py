@@ -37,7 +37,7 @@ def Ender_main():
     gcode1 = str(input("Enter filename for gcode: "))
     port_2 = str(input("Enter port for pump_2: "))
     gcode2 = str(input("Enter filename for gcode: "))
-    port_3 = str(input("Enter port for pump_2: "))
+    port_3 = str(input("Enter port for pump_3: "))
     gcode3 = str(input("Enter filename for gcode: "))
 
     p1 = set_up(port_1, gcode1)
