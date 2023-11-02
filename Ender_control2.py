@@ -35,27 +35,27 @@ def ender_print(p):
 def Ender_main():
     port_1 = str(input("Enter port for pump_1: "))
     gcode1 = str(input("Enter filename for gcode: "))
-    port_2 = str(input("Enter port for pump_2: "))
-    gcode2 = str(input("Enter filename for gcode: "))
-    port_3 = str(input("Enter port for pump_3: "))
-    gcode3 = str(input("Enter filename for gcode: "))
+    #port_2 = str(input("Enter port for pump_2: "))
+    #gcode2 = str(input("Enter filename for gcode: "))
+    #port_3 = str(input("Enter port for pump_3: "))
+    #gcode3 = str(input("Enter filename for gcode: "))
 
     p1 = set_up(port_1, gcode1)
-    p2 = set_up(port_2, gcode2)
-    p3 = set_up(port_3, gcode3)
+    #p2 = set_up(port_2, gcode2)
+    #p3 = set_up(port_3, gcode3)
 
     connect(p1)
-    connect(p2)
-    connect(p3)
+    #connect(p2)
+    #connect(p3)
 
     count = "False"
 
     while count == "False": 
         status_p = str(input("Start print? Y/N "))
         if status_p == "Y":
-            ender_print(p1), ender_print(p2), ender_print(p3)
+            ender_print(p1)#, ender_print(p2), ender_print(p3)
         elif status_p == "N":
-            p1[0].disconnect(), p2[0].disconnect(), p3[0].disconnect()
+            p1[0].disconnect()#, p2[0].disconnect(), p3[0].disconnect()
             break
         else:
             print("Please enter 'Y' or 'N'.")
